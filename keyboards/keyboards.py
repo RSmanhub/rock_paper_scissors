@@ -27,12 +27,12 @@ yes_no_kb: ReplyKeyboardMarkup = yes_no_kb_builder.as_markup(
 button_1 = KeyboardButton(text=LEXICON_RU['rock'])
 button_2 = KeyboardButton(text=LEXICON_RU['scissors'])
 button_3 = KeyboardButton(text=LEXICON_RU['paper'])
+button_4 = KeyboardButton(text=LEXICON_RU['lizard'])
+button_5 = KeyboardButton(text=LEXICON_RU['spock'])
 
-# Создаем игровую клавиатуру с кнопками "Камень 🗿",
-# "Ножницы ✂" и "Бумага 📜" как список списков
+# Создаем игровую клавиатуру с кнопками как список списков
 game_kb = ReplyKeyboardMarkup(
-    keyboard=[[button_1],
-              [button_2],
-              [button_3]],
+    keyboard=[[button_1, button_2, button_3],
+              [button_4, button_5]],
     resize_keyboard=True
 )

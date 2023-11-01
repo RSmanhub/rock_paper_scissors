@@ -35,8 +35,10 @@ async def process_no_answer(message: Message):
 
 # Этот хэндлер срабатывает на любую из игровых кнопок
 @router.message(F.text.in_([LEXICON_RU['rock'],
+                            LEXICON_RU['scissors'],
                             LEXICON_RU['paper'],
-                            LEXICON_RU['scissors']]))
+                            LEXICON_RU['lizard'],
+                            LEXICON_RU['spock']]))
 async def process_game_button(message: Message):
     bot_choice = get_bot_choice()
     await message.answer(text=f'{LEXICON_RU["bot_choice"]} '
